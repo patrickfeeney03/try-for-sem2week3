@@ -6,8 +6,6 @@ public class Music extends Product{
 
     public Music() {
         super();
-        artist = "";
-        label = "";
         count++;
     }
 

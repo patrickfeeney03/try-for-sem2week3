@@ -16,11 +16,6 @@ public class ViewerApp {
             Product p = Database.getProduct(code);
             Animal a = Database.getAnimal(code);
 
-            /*
-            System.out.println(p);
-            System.out.println(a);
-
-             */
             if(p != null) {
                 // Print product stuff
                 System.out.println("Description: " + p.toString());

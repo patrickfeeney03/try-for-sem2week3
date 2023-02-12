@@ -16,14 +16,29 @@ public class ViewerApp {
             Product p = Database.getProduct(code);
             Animal a = Database.getAnimal(code);
 
+            /*
             System.out.println(p);
             System.out.println(a);
 
+             */
+            if(p != null) {
+                // Print product stuff
+                System.out.println("Description: " + p.toString());
+                System.out.println("Price: " + p.getPriceFormatted());
+            }
+            else if (a != null) {
+                // Print animal stuff
+                System.out.println("Description: " + a.toString());
+            }
+            else {
+                System.out.println("No product matches this product code.");
+            }
+
+            System.out.println("\nProduct count: " + (Product.getCount() + Animal.getCount()) + "\n");
+
             System.out.println("Continue? (y/n): ");
             choice = sc.nextLine();
-
-
+            System.out.println();
         }
-
     }
 }

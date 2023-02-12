@@ -6,6 +6,8 @@ public class Dog extends Animal{
     private String neutered;
 
     public Dog() {
+        super();
+        count++;
     }
 
     public String getVaccination() {
